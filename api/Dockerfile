@@ -4,7 +4,8 @@ FROM golang:latest
 ADD . /go/src/github.com/VictorEspiritu/project/api
 
 # Install libs 
-RUN apt-get install bzr
+RUN apt-get update
+RUN apt-get -y install bzr
 
 # Install our depedencies
 RUN go get github.com/go-martini/martini
@@ -14,7 +15,7 @@ RUN go get labix.org/v2/mgo
 RUN go get labix.org/v2/mgo/bson
 
 # Install API binary globally within container 
-RUN go get github.com/VictorEspiritu/project/api
+RUN go install github.com/VictorEspiritu/project/api
 
 # Set binary as Entrypoint
 ENTRYPOINT /go/bin/api

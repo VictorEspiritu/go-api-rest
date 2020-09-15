@@ -32,10 +32,10 @@ func (pc *ProductController) GetAllProducts(r render.Render) {
 
 func (pc *ProductController) PostProduct(product models.Product, r render.Render) {
    session := pc.session.DB(os.Getenv("DB_NAME")).C("products")
-   product.Id := bson.NewObjectId()
-   product.Title := product.Title
-   product.Description := product.Description
-   product.Price := product.Price
+   product.Id = bson.NewObjectId()
+   product.Title = product.Title
+   product.Description = product.Description
+   product.Price = product.Price
    session.Insert(product)
 
    r.JSON(201, product)

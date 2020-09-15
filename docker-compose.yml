@@ -11,7 +11,7 @@ api:
 
 database:
    image: mongo:3.0
-   command: mongod --smallfiles --quite --logpath=/dev/null
+   command: mongod --smallfiles --quiet --logpath=/dev/null
 
 
 
