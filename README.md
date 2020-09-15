@@ -9,3 +9,9 @@
 - Package dockerfile
 - Execution docler-compose
 - Editor Nvim
+
+### Execution
+```
+docker-compose build && docker-compose up
+```
+
