@@ -1,6 +1,6 @@
 # go-api-rest
 
-### Fist project example in Go 
+### First project example in Go 
 
 - Language GO
 - Database Mongo
